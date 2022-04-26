@@ -1,0 +1,45 @@
+<div class="container">
+
+  <article class="indicator-card">
+
+      <section class="state">
+        <h1 class="state-name">Дизелевоз DZ-1800</h1>
+        <p class="state-number">12348-1234995</p>
+
+        <h2 class="state-title">Состояние</h2>
+        <div class="state-panels">
+          <div class="state panel-works">
+            <p class="panel-works--inwork">В работе</p>
+            <p class="panel-works--time">20 мин. назад</p>
+            <button class="button-panel map__feature--washer" type="button" name="panel-works--wifi">Обновить</button>
+          </div>
+          <div class="state panel-info">
+            <button class="button-panel map__feature--parking" type="button" name="panel-info--readme">ReadMe</button>
+            <button class="button-panel map__feature--dishwasher" type="button" name="panel-info--info">Info</button>
+            <button class="button-panel map__feature--wifi" type="button" name="panel-info--locate" disabled>Locate</button>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="indicators">
+
+        <ul class="indicators-list">
+          <li class="indicator-item" *ngFor="let indicator of indicators">
+            <app-indicator [indicator]="indicator"></app-indicator>
+          </li>
+        </ul>
+
+      </section>
+
+  </article>
+
+  <section class="popup-time-server">
+    <p class="popup-time-server--message">Время сохранения данных на сервере</p>
+  </section>
+
+  <section class="popup-state-server">
+    <p class="popup-state-server--message">Разрыв связи</p>
+  </section>
+
+<div class="container">
